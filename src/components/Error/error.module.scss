@@ -1,0 +1,17 @@
+@import '../../helpers.scss';
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: $genericMeasure * 20;
+
+    .error{
+        background: $lightPurple;
+        color: $purple;
+        font-size: $fontMedium;
+        font-weight: 600;
+        padding:  $genericMeasure * 3 $genericMeasure * 5;
+        border-radius: $genericMeasure;
+    }
+}

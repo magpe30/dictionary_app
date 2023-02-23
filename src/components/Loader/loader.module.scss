@@ -1,0 +1,52 @@
+$purpleGradient: linear-gradient(to right, #4A00E0, #8E2DE2);
+$purpleGradientFallBack: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+$transparent: rgba(255, 255, 255, 1);
+
+$bookWidth: 10px;
+$bookHeight: 40px;
+$duration: 1.3s;
+
+@mixin animationBook($animationName, $delay) {
+  animation: $duration $delay ease-in $animationName alternate infinite;
+}
+
+.loader {
+    display: flex
+}
+
+.loader > div {
+  width: $bookWidth;
+  height: $bookHeight;
+  background: #8E2DE2; 
+  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  
+  background: linear-gradient(to right, #4A00E0, #8E2DE2); 
+
+}
+
+
+.firstBook {
+  margin-right: 4px;
+  @include animationBook(changeColor, 0s);
+}
+
+.secondBook {
+  margin-right: 10px;
+  transform:
+    translateX( 5px )
+    skewX(-15deg);
+  @include animationBook(changeColor, 0.4s);
+}
+
+.thirdBook {
+  @include animationBook(changeColor, 0.9s);
+}
+
+@keyframes changeColor {
+  from {
+    background: $purpleGradient;
+  }
+  to {
+    background: $transparent;
+  }
+}
+

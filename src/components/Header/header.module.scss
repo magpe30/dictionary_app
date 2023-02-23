@@ -1,0 +1,139 @@
+@import '../../helpers.scss';
+
+.headerContainer {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .toggles {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+
+        .toggle {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+    .divider {
+        width: 2px;
+        margin: 0 $genericMeasure * 2;
+        height: $genericMeasure * 4;
+        background-color: $grey;
+    }
+
+    .accordion {
+        font-weight: 800;
+        font-size: $fontMedium;
+    }
+
+    input[type=checkbox]{
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+    
+    label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: $genericMeasure * 5;
+        height: $genericMeasure * 2.5;
+        background: $grey;
+        margin-right: $genericMeasure;
+        display: block;
+        border-radius: $genericMeasure * 12.5;
+        position: relative;
+    }
+    
+    label:after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        width: 13px;
+        height: 13px;
+        background: $backgroundColor;
+        border-radius: $genericMeasure * 11;
+        transition: 0.3s;
+    }
+    
+    input:checked + label {
+        background: $purple;
+    }
+    
+    input:checked + label:after {
+        left: calc(100% - 5px);
+        transform: translateX(-100%);
+    }
+    
+    label:active:after {
+        width: 13px;
+    }
+}
+
+.logo {
+    width: $genericMeasure * 6;
+}
+
+.theme {
+    width: $genericMeasure * 3;
+    margin-bottom: calc($genericMeasure / 2.5);
+}
+
+.searchInput{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    label {
+        display: none;
+    }
+
+    input {
+        font-size: $fontSmall;
+        font-family: $primaryFont;
+        color: $black;
+        width: 100%;
+        height: 100%;
+        background: var(--greyPrimary);
+        border: none;
+        outline: none;
+        margin-top: $genericMeasure * 3;
+        padding: $genericMeasure * 3;
+        border-radius: $genericMeasure;
+    }
+
+    input[type='text']{
+        color: var(--fontColor);
+        font-size: $fontMedium;
+        font-weight: 600;
+    }
+
+    .buttonContainer {
+        width: 30px;
+        right: 10px;
+        top: 45px;
+        position: absolute;
+        height: 35px;
+        border: none;
+        background: none;
+
+        .searchIcon {
+            position: absolute;
+            width: 30px;
+            right: 0;
+            top: -5px;
+            cursor: pointer;
+        }
+
+        .searchIcon:hover {
+            width: 35px;
+            transition: width 0.3s ease-in-out;
+        }
+    }
+}

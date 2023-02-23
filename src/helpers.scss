@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+//margin, padding measure
+$genericMeasure: 8px;
+
+//responsivness
+$mobileSize: $genericMeasure * 50; // 400px
+
+//fonts 
+$fontSmall: $genericMeasure * 2;
+$fontMedium: ($genericMeasure * 3) - 4px;
+$fontLarge: $genericMeasure * 3;
+$fontMaximum: $genericMeasure * 7;
+
+
+//colors
+$backgroundColor: #FFFFFF;
+$black: #000;
+$lightGrey: #e4e2e2;
+$grey: #757575;
+$lightPurple: #E9D0FA;
+$purple: #AA46EF;
+
+$primaryFont: 'Nanum Myeongjo', serif;

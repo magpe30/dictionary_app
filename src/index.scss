@@ -1,0 +1,19 @@
+@import './helpers.scss';
+
+body {
+    margin: 0;
+    color: $black;
+}
+
+.app {
+    background-color: var(--background);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding:  $genericMeasure * 2;
+    font-family:$primaryFont; 
+    color: var(--fontColor)
+}

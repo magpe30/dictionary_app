@@ -1,0 +1,70 @@
+@import '../../helpers.scss';
+
+.meaningWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wordSection{
+    h1{
+        font-size: $fontMaximum;
+        margin-bottom: $genericMeasure * 2;
+    }
+
+    p {
+        font-size: $fontLarge;
+        color: $purple;
+        margin-top: 0;
+    }
+}
+
+.buttonWrapper{
+
+    button{
+
+        cursor: pointer;
+        width: $genericMeasure * 10;
+        height: $genericMeasure * 10;
+        border: none;
+        border-radius: 50%;
+        background: $lightPurple;
+        transition: box-shadow 0.3s ease-in;
+    
+        img{
+            width: $genericMeasure * 5;
+            margin-left: calc($genericMeasure / 2);
+        }
+    }
+
+    button:hover {
+        box-shadow: 0 3px 20px 0 rgba(170,70,239,0.5)
+    }
+    
+    @media (max-width: $mobileSize) {
+        button {
+            width: $genericMeasure * 8;
+            height: $genericMeasure * 8;
+
+           img {
+                width: $genericMeasure * 3;
+           }
+        }
+    }
+}
+
+.searchContainer {
+    margin: $genericMeasure * 8;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+
+    .vector {
+        width: $genericMeasure * 25;
+    }
+
+    p{
+        font-size: $fontMedium;
+        margin-top: $genericMeasure * 2;
+    }
+}
