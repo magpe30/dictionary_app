@@ -14,6 +14,6 @@ body {
     max-width: 1120px;
     margin: 0 auto;
     padding:  $genericMeasure * 2;
-    font-family:$primaryFont; 
+    font-family: var(--fontFamily); 
     color: var(--fontColor)
 }

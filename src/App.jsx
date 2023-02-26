@@ -7,7 +7,7 @@ import Error from './components/Error/Error';
 import { useTheme } from './contexts/Theme/Theme.context';
 
 const App = () => {
-    const { theme } = useTheme();
+    const { theme, font } = useTheme();
 
     const [error, setError] = useState(false);
     const [meanings, setMeanings] = useState(null);
@@ -32,7 +32,7 @@ const App = () => {
     }
 
     return (
-        <div className="app" style={{...theme}}>
+        <div className="app" style={{...theme, ...font}}>
             <div className="container">
                 <Header word={word} setWord={setWord} findWord={onFindWord} />
                 {error ? 

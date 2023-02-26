@@ -11,3 +11,17 @@ export const THEMES = {
         '--greyPrimary': '#2F2E41'
     }
 }
+
+export const FONTS = {
+    nanum: {
+        '--fontFamily' : 'Nanum Myeongjo, serif'
+    },
+
+    gloock: {
+        '--fontFamily' : 'Gloock, serif'
+    },
+
+    noto: {
+        '--fontFamily' : 'Noto Sans, sans-serif'
+    }
+}
