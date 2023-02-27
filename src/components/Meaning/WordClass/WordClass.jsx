@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './wordClass.module.scss';
 
 const WordClass = ({meaning, source}) => {
+    const correctSource = source?.[0];
 
     return (
         <>  
@@ -38,7 +39,7 @@ const WordClass = ({meaning, source}) => {
             <div className={styles.sourceContainer}>
                 <div className={styles.line}></div>
                 <p>Source</p>
-                <a href={source} target="_blank">{source}</a>
+                <a href={correctSource} target="_blank">{correctSource}</a>
             </div>
         </>
     ) 
