@@ -23,7 +23,7 @@ const Header = (props) => {
         <>
             <div className={styles.headerContainer}>
                 <div>
-                    <img src={`../../public/${bookIconPath}.svg`} className={styles.logo}/>
+                    <img src={`./${bookIconPath}.svg`} className={styles.logo}/>
                 </div>
                 <div className={styles.toggles} >
                     <Dropdown />
@@ -37,7 +37,7 @@ const Header = (props) => {
                     <label htmlFor="switch">
                             toggle
                     </label>
-                    <img src={`../../public/${moonIconPath}.svg`} className={styles.theme}/>
+                    <img src={`./${moonIconPath}.svg`} className={styles.theme}/>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@ const Header = (props) => {
                         }}
                     />
                     <button className={styles.buttonContainer} onClick={(e) => findWord(e)}>
-                        <img src="../../public/search.svg" className={styles.searchIcon}/>
+                        <img src="./search.svg" className={styles.searchIcon}/>
                     </button>
                 </div>
             </form>

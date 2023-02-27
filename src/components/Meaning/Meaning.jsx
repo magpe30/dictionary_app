@@ -17,8 +17,8 @@ const Meaning = ({ meanings, loading }) => {
     const [playing, onPlay] = usePlayAudio(soundUrl?.[0]);
 
     const getSoundIcon = playing ? 
-        <img src="../../public/megaphone.svg"></img> : 
-        <img src="../../public/play.svg"></img>;
+        <img src="./megaphone.svg"></img> : 
+        <img src="./play.svg"></img>;
 
 
     return (
@@ -42,7 +42,7 @@ const Meaning = ({ meanings, loading }) => {
                 <WordClass meaning = {meanings?.[0].meanings} source={meanings?.[0]?.sourceUrls}/>
             </div> : 
             <div className={styles.searchContainer}>
-                <img src='../../public/dictionary.svg' className={styles.vector}/>
+                <img src='./dictionary.svg' className={styles.vector}/>
                 <p>{loading ? "Loading..." : "Search for a word..."}</p>
                 {loading &&
                   <Loader />
