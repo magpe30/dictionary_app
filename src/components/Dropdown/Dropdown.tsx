@@ -5,12 +5,12 @@ import { useTheme } from '../../contexts/Theme/Theme.context';
 
 const Dropdown = () => {
     const { setCurrentFont } = useTheme();
-    const [onOpen, setOnOpen] = useState(false);
+    const [onOpen, setOnOpen] = useState<boolean>(false);
     const fonts = ['Nanum', 'Gloock', 'Noto'];
 
     const arrowIcon = onOpen ? 'arrowOpen' : 'arrowDown';
 
-    const onFontChanges = (font) => {
+    const onFontChanges = (font: string) => {
         setCurrentFont(font.toLowerCase());
         setOnOpen(false);
     };
