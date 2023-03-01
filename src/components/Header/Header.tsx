@@ -4,14 +4,20 @@ import Dropdown from '../Dropdown/Dropdown';
 import styles from './header.module.scss';
 import { useTheme } from '../../contexts/Theme/Theme.context';
 
-const Header = (props) => {
+type HeaderProps = {
+    word: string,
+    setWord: (e:any) => void,
+    findWord: (e:any) => void,
+}
+
+const Header = (props: HeaderProps) => {
     const { themeType, setCurrentTheme } = useTheme();
     const { word, setWord, findWord} = props;
 
     const bookIconPath = themeType == 'light' ? 'book' : 'bookWhite';
     const moonIconPath = themeType == 'light' ? 'moon' : 'moonPurple';
    
-    const changeThemes = (eventInput) => {
+    const changeThemes = (eventInput: boolean) => {
         if(eventInput) {
             setCurrentTheme('dark');
         } else {
