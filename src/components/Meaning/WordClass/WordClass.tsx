@@ -2,13 +2,23 @@ import React from 'react';
 
 import styles from './wordClass.module.scss';
 
+type WordProps = {
+    partOfSpeech: string[] | undefined; 
+    definitions: any
+    synonyms: string[]; 
+}
+
+type DefinitionProps = {
+    definition: string | React.ReactElement<any, string> |  null | undefined; 
+}
+
 const WordClass = ({meaning, source}) => {
     const correctSource = source?.[0];
 
     return (
         <>  
            {
-            meaning.map((word, index) => 
+            meaning.map((word: WordProps, index: number) => 
                 {
                     return (
                         <div key={`${index}-word`}>
@@ -19,7 +29,7 @@ const WordClass = ({meaning, source}) => {
                             <div className={styles.summary}>
                                 <p>Meaning</p>
                                 <ul>
-                                    {word.definitions.map((def, index) =>
+                                    {word.definitions.map((def: DefinitionProps, index: number) =>
                                         <li key={`def-${index}`}>{def.definition}</li>
                                     )}
                                 </ul>

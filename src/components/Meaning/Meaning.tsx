@@ -10,9 +10,9 @@ const Meaning = ({ meanings, loading }) => {
     const phonetic = meanings?.[0].phonetic;
     const urlPath = meanings?.[0].phonetics
 
-    const getCorrectPath = urlPath && urlPath.map((path) => path?.audio);
+    const getCorrectPath = urlPath && urlPath.map((path: { audio: string; }) => path?.audio);
 
-    const soundUrl = getCorrectPath && getCorrectPath.filter((sound) => sound !== '');
+    const soundUrl = getCorrectPath && getCorrectPath.filter((sound: string) => sound !== '');
   
     const [playing, onPlay] = usePlayAudio(soundUrl?.[0]);
 
@@ -33,7 +33,7 @@ const Meaning = ({ meanings, loading }) => {
                     <div className={styles.buttonWrapper}>
                         {
                             soundUrl?.[0]&& 
-                            <button onClick={onPlay}>
+                            <button onClick={() => onPlay()}>
                                 {getSoundIcon}
                             </button>
                         }

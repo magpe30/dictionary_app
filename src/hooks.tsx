@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 
-
-export const usePlayAudio = url => {
+export const usePlayAudio = (url:string) => {
     const [playing, setPlaying] = useState(false);
     const tune = new Audio(url);
 
@@ -13,7 +12,9 @@ export const usePlayAudio = url => {
         setPlaying(false);
     }
 
-    const onPlay = () => setPlaying(!playing);
-   
-    return [playing, onPlay];
+    const onPlay = () => {
+        setPlaying(!playing);
+    }
+
+    return [playing, onPlay] as const;
 }
