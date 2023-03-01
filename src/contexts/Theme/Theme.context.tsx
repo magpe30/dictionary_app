@@ -18,7 +18,7 @@ export const ThemeContext = React.createContext<ThemeContextProps>({
     font: FONTS['nanum'],
 } as ThemeContextProps);
 
-export const ThemeProvider: React.FC = ({ children }: any) => {
+export const ThemeProvider = ({ children }) => {
     const [currentTheme, setCurrentTheme] = useState<ThemeType>('light');
     const [currentFont, setCurrentFont] = useState<FontType>('nanum')
 

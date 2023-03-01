@@ -14,7 +14,7 @@ const App = () => {
     const [word, setWord] = useState("");
     const [loading, setLoading] = useState(false);
 
-    const onFindWord = async(e) => {
+    const onFindWord = async(e: any) => {
         e.preventDefault();
         try {
             setLoading(true);
@@ -32,7 +32,7 @@ const App = () => {
     }
 
     return (
-        <div className="app" style={{...theme, ...font}}>
+        <div className="app" style={{...theme, ...font} as React.CSSProperties}>
             <div className="container">
                 <Header word={word} setWord={setWord} findWord={onFindWord} />
                 {error ? 
