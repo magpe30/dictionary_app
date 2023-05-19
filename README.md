@@ -1,6 +1,15 @@
 # dictionary_app
-Dictionary_(using free dictionary api)
+Dictionary app, built with public dictionary API:
 
+Challenge from Frontend Mentor ->  https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL
+ 
+Tech used:
+- react
+- TypeScript
+- React/Context
+- Scss
+
+To Start: 
 npm run dev to start 
 
 Simple app using free dicionary api, made just for fun and practise
